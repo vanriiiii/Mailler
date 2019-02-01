@@ -1,6 +1,8 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  #参考HP[https://www.cman.jp/network/term/domain/]
   config.action_mailer.default_url_options = { host: 'sheltered-shelf-82914.herokuapp.com' }
+  config.action_mailer.delivery_method = :letter_opener_web
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
     user_name: ENV['SENDGRID_USERNAME'],
